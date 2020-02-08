@@ -8,10 +8,10 @@ biru='\e[1;34m'
 NC='\e[0m'
 #intro
 printf "${ijo}
-      █████╗╔█████  ██╗  ██  ╔██████╗  ██╗  ██
+    ██████╗╔█████  ██╗  ██  ╔██████╗  ██╗  ██
         ██║  ██  ║██  ██║  ██  ██    ██  ██║  ██
         ██║  ██  ║██  ███████  ██    ██  ███████
-        ██╝      ╚██       ██  ╚██████╝       ██                               ${kuning}
+        ██╝      ╚██       ██  ╚██████╝       ██                               ${merah}
 	      SMS Gratis(Free SMS)
 	      Code By : m404new1
 	          (selamat mencoba saudara)
@@ -20,9 +20,9 @@ printf "${kuning}__________________________________________________${NC}\n\n"
 sms(){
 	main(){
 	printf "${kuning}[+]${NC} Destination Number : ";read Num
-	printf "${kuning}[+]${NC} Message : ";read Message
+	printf "${kuning}[+]${NC} pesan you : ";read Message
 	send=$(curl 'http://nandrbiz1.com/smsgratis.php' -d "num=$Num&message=$Message" -s)
-	if [[ $send == "SMS Gratis Telah Dikirim" ]]
+	if [[ $send == "SMS Telah Dikirim" ]]
 	then
 		printf "${ijo}[SENT]${NC} [Message : $Message] [To : $Num]\n"
 	else
